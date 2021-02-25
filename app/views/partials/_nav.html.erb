@@ -28,6 +28,12 @@
           </a>
           <a class="button is-light">
             Log in
+
+            <%= link_to "Log out",
+              destroy_user_session_path,
+              method: :delete,
+              class: "button is-light"
+            %>
           </a>
         </div><!-- /buttons -->
       </div><!-- /navbar-item -->
@@ -38,15 +44,15 @@
 </nav>
 
 <script>
-$(document).ready(function() {
+  $(document).ready(function() {
 
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
 
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".navbar-burger").toggleClass("is-active");
       $(".navbar-menu").toggleClass("is-active");
 
+    });
   });
-});
 </script>
